@@ -64,7 +64,7 @@ class RollPosition
     end
 
     def test
-        "[#{@x}, #{@y}]: #{@has_roll}"
+        "[#{@x}, #{@y}]: #{@has_roll}, #{valid?}"
     end
 end
 
@@ -81,16 +81,21 @@ end
 
 total_positions = grid.count
 
-roll_positions = grid.filter {|position| position.has_roll? }
+rolls = grid.filter {|position| position.has_roll? }
 
-total_rolls = roll_positions.count
+puts "#{total_positions} total positions (#{rolls.count} rolls)"
 
-puts "#{total_positions} total positions (#{total_rolls} rolls)"
+loop do 
 
-roll_positions.each.with_index(1) do |position, index|
-    puts "At position #{index} / #{total_rolls} rolls" if index % 100 == 0
-    position.count_neighbours(roll_positions)
+    rolls.each.with_index(1) do |roll, index|
+        puts "#{((index.to_f / rolls.count.to_f) * 100).round(0)}% of rolls (#{rolls.count})" if index % 1000 == 0
+        roll.count_neighbours(rolls)
+    end
+
+    puts RollPosition.total_valid
+    puts "================================"
+    break if rolls.count { |roll| roll.valid? } == 0
+    rolls.reject! {|roll| roll.valid? }
 end
-
 puts RollPosition.total_valid
-puts "In seconds: #{(Time.now - time_start)}"
+puts "In seconds: #{(Time.now - time_start).round(2)}"
