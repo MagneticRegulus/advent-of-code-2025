@@ -15,3 +15,9 @@ Had a lot of fun with part one as I found an algorithm which really sped up the 
 I wrote some terribly inefficient (and I *mean* inefficient) ruby code for this one because I wanted to play around with ruby classes again. Mistake. It worked...it just took 17 minutes 25 seconds. If I had more time, I would have made it much faster.
 
 I must remember to do things more simply tomorrow!
+
+### Day 5
+
+Part 1 was much shorter than yesterday's, took about 20 minutes to sort out. Though, I tried to create a flattened list of all the valid ids...crashed my computer twice. Check if any ranges cover a give id? Instant response. Perfect Big O problem!
+
+Part 2, I actually found pretty much the solution I was looking for on Stack_exchange, but it was a good way to be reminded of the .inject method and how you can use it to build an enumerable.
