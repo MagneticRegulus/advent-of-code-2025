@@ -21,3 +21,7 @@ I must remember to do things more simply tomorrow!
 Part 1 was much shorter than yesterday's, took about 20 minutes to sort out. Though, I tried to create a flattened list of all the valid ids...crashed my computer twice. Check if any ranges cover a give id? Instant response. Perfect Big O problem!
 
 Part 2, I actually found pretty much the solution I was looking for on Stack_exchange, but it was a good way to be reminded of the .inject method and how you can use it to build an enumerable.
+
+### Day 7
+
+Yet again, I tried to brute force my way through part 2 and crashed my computer. Good stuff!
