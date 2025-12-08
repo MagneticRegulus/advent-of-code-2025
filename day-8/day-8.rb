@@ -22,6 +22,23 @@ class BoxPair
     def box_ids
         return @boxes.map {|box| box[:id]}
     end
+
+    def wall_distance
+        return @p[:x] * @q[:x]
+    end
+end
+
+def calculate_circuits(circuits, connection)
+    connection.connected = true
+    ids = connection.box_ids
+
+    if circuits.any? {|circuit| circuit.intersect?(ids)}
+        selected = circuits.select {|circuit| circuit.intersect?(ids)}
+        circuits.reject! {|circuit| circuit.intersect?(ids)}
+        circuits << ids.union(selected.flatten)
+    else
+        circuits << ids
+    end
 end
 
 junction_boxes = []
@@ -51,18 +68,7 @@ top_shortest_connections = pairs.take(TOTAL_PAIRS)
 circuits = []
 
 # connect the circuits
-top_shortest_connections.each do |connection|
-    connection.connected = true
-    ids = connection.box_ids
-
-    if circuits.any? {|circuit| circuit.intersect?(ids)}
-        selected = circuits.select {|circuit| circuit.intersect?(ids)}
-        circuits.reject! {|circuit| circuit.intersect?(ids)}
-        circuits << ids.union(selected.flatten)
-    else
-        circuits << ids
-    end
-end
+top_shortest_connections.each {|connection| calculate_circuits(circuits, connection) }
 
 # Get the TAKE_LARGEST with the largest circuit sizes and multiply them together
 circuit_sizes = circuits.sort_by! {|circuit| circuit.size }.reverse!.map {|circuit| circuit.size}
@@ -70,3 +76,19 @@ largest_sizes = circuit_sizes.take(TAKE_LARGEST)
 product = largest_sizes.inject(1) {|result, size| result * size}
 
 puts "Product: #{product}"
+
+# Part 2
+# calculate remaining circuits
+remaining_pairs = pairs[TOTAL_PAIRS..-1]
+
+single_circuit = nil
+
+remaining_pairs.each do |connection|
+    calculate_circuits(circuits, connection)
+    if circuits.size == 1 && circuits[0].size == total_junction_boxes
+        single_circuit = connection
+        break
+    end
+end
+
+puts "Product of xs of the final connection: #{single_circuit.wall_distance}"

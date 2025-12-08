@@ -25,3 +25,6 @@ Part 2, I actually found pretty much the solution I was looking for on Stack_exc
 ### Day 7
 
 Yet again, I tried to brute force my way through part 2 and crashed my computer. Good stuff! **I did say lots of this code will be garbage**
+
+### Day 8
+I think I finally remembered how to use ruby classes again in a way that is helpful rather than being over-complex.
