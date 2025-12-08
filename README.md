@@ -4,7 +4,7 @@ This is a repo for Advent of Code 2025.
 
 This year, I decided to complete the calendar in Ruby, my first programming language. I haven't programmed in Ruby in years, so this will be a lot of fun. Of course, my rustiness will show!
 
-**This is not intended to be a showcase of my programming skills; it's just some fun for a few days!**
+**This is not intended to be an exemplar of my programming skills; it's just some fun for a few days! Lots of this code will be abolute garbage**
 
 ### Day 2
 
@@ -24,4 +24,4 @@ Part 2, I actually found pretty much the solution I was looking for on Stack_exc
 
 ### Day 7
 
-Yet again, I tried to brute force my way through part 2 and crashed my computer. Good stuff!
+Yet again, I tried to brute force my way through part 2 and crashed my computer. Good stuff! **I did say lots of this code will be garbage**
