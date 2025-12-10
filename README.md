@@ -28,3 +28,6 @@ Yet again, I tried to brute force my way through part 2 and crashed my computer.
 
 ### Day 8
 I think I finally remembered how to use ruby classes again in a way that is helpful rather than being over-complex.
+
+### Day 9
+Well part 2 was a bit much, but I did eventually get it...took me a while to realise I just needed to see if anylines bisected the inner tiles of a rectangle
