@@ -31,3 +31,6 @@ I think I finally remembered how to use ruby classes again in a way that is help
 
 ### Day 9
 Well part 2 was a bit much, but I did eventually get it...took me a while to realise I just needed to see if anylines bisected the inner tiles of a rectangle
+
+### Day 10
+I think I need to start over with this one because I spent a lot of time making a graph with nodes only to have the most optimal performance solution be too high an answer. I think I need to make this more mathy than what I've done
