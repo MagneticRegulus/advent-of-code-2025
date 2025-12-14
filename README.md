@@ -34,3 +34,6 @@ Well part 2 was a bit much, but I did eventually get it...took me a while to rea
 
 ### Day 10
 I think I need to start over with this one because I spent a lot of time making a graph with nodes only to have the most optimal performance solution be too high an answer. I think I need to make this more mathy than what I've done
+
+### Day 11
+Ok part 2 of this one took a few days to do because I simply forgot to mark nodes as visited. Whoops! Once I did that, the whole program went from taking 12+ hours to run to 0.07 seconds. *sigh* Kicking myself, kicking myself! But otherwise this was a pretty simple DFS graph. Pretty cool. I did basically have the solution in a few hours on day 11, it was just that one thing!
