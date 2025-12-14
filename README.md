@@ -33,7 +33,11 @@ I think I finally remembered how to use ruby classes again in a way that is help
 Well part 2 was a bit much, but I did eventually get it...took me a while to realise I just needed to see if anylines bisected the inner tiles of a rectangle
 
 ### Day 10
-I think I need to start over with this one because I spent a lot of time making a graph with nodes only to have the most optimal performance solution be too high an answer. I think I need to make this more mathy than what I've done
+I think I need to start over with this one because I spent a lot of time making a graph with nodes only to have the most optimal performance solution be too high an answer. I think I need to make this more mathy than what I've done. 
+
+Edit 14 December - Part 1: I misread the instructions and thought the minimum allowed number of presses for each set was 2. I was treating every instance of a perfect button as requiring 3 button presses. *sab trombone noises*
+
+*(Gaussian Elimination?)* I got 583 for part one and it was too high
 
 ### Day 11
 Ok part 2 of this one took a few days to do because I simply forgot to mark nodes as visited. Whoops! Once I did that, the whole program went from taking 12+ hours to run to 0.07 seconds. *sigh* Kicking myself, kicking myself! But otherwise this was a pretty simple DFS graph. Pretty cool. I did basically have the solution in a few hours on day 11, it was just that one thing!
